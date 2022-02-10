@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment_1.Tester" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-10T05:48:51" hostname="LEGION-JAYANTH" time="0.315">
+  <properties/>
+  <testcase name="nabongu()" classname="assignment_1.Tester" time="0.315"/>
+  <system-out><![CDATA[payment_id : 1
+Database Connection closed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

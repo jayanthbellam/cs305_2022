@@ -24,7 +24,7 @@ The value of columns selected by the query will be populated into the matching p
 * means that if the class does not have a matching property for a selected
 * column, then the method will throw an exception.
 *
-* For “paramType”, the value can also be a primitive type such as int, float, string, or a collection/array of such primitives. In such a case the placeholder in the SQL query for the primitive type can be named ${value}, and the value supplied will be directly substituted when running the query.
+* For paramType, the value can also be a primitive type such as int, float, string, or a collection/array of such primitives. In such a case the placeholder in the SQL query for the primitive type can be named ${value}, and the value supplied will be directly substituted when running the query.
 */
 public interface SqlRunner {
    /*
@@ -35,7 +35,7 @@ public interface SqlRunner {
     *                   populating it with the data returned by the SQL.
     * @return The object populated with the SQL results.
     */
-   Object selectOne(String queryId, Object queryParam, Class resultType);
+   Object selectOne(String queryId, Object queryParam, Class<?> resultType);
 
    /*
     * Same as {@link #selectOne(String, Object, Class)} except that this one
@@ -45,7 +45,7 @@ public interface SqlRunner {
     * @param resultItemType
     * @return
     */
-   List<?> selectMany(String queryId, Object queryParam, Class resultItemType);
+   List<Object> selectMany(String queryId, Object queryParam, Class<?> resultItemType);
 
    /*
     * Execute an update statement and return the number of rows affected.
